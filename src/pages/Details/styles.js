@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: red;
+  font-size: 2.4rem;
 `;
