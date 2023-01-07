@@ -1,5 +1,5 @@
 import { Container } from "./styles";
 
-export function Button() {
-  return <Container type="button">Meus Pedidos</Container>;
+export function Button({ title }) {
+  return <Container type="button">{title}</Container>;
 }
