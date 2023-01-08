@@ -6,6 +6,7 @@ export default {
     BACKGROUND_600: "#0d1d25",
 
     BACKGROUND_BUTTON: "#750310",
+    BACKGROUND_BUTTON_ADD: "#92000E",
 
     WHITE: "#FFF",
     BLUE: "#82F3FF",
