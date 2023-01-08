@@ -16,14 +16,16 @@ body{
 
   -webkit-font-smoothing: antialiased
 }
-h1, span, a{
-  font-family: 'Roboto', sans-serif;
-
-}
-input{
+h1, a, input{
   font-family: 'Roboto', sans-serif;
 }
+button, h2, p, span{
+  font-family: 'Poppins', sans-serif;
+}
 
+ul{
+  list-style: none;
+}
 a{
   list-style: none;
   text-decoration: none;

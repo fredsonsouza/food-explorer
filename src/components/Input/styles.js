@@ -17,10 +17,12 @@ export const Container = styled.div`
 
     background: transparent;
     border: 0;
+
     color: ${({ theme }) => theme.COLORS.WHITE};
     font-size: 1.6rem;
 
     &placeholder {
+      display: flex;
       font-size: 1.6rem;
       color: ${({ theme }) => theme.COLORS.GRAY_400};
     }

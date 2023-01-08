@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import signOut from "../../assets/SignOut.svg";
 
 export const Container = styled.header`
   grid-area: header;
@@ -9,13 +10,14 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 0 12.3rem;
+  padding: 0 12.4rem;
 `;
 export const Content = styled.div`
+  max-width: 136.8rem;
+  margin: 0 auto;
   display: flex;
-  align-items: center;
   flex: 1;
+  align-items: center;
   gap: 3.2rem;
 
   a {
@@ -29,11 +31,11 @@ export const Content = styled.div`
 export const Brand = styled.div`
   display: flex;
   align-items: center;
-  gap: 2rem;
 
   > svg {
     width: 3rem;
     height: 3rem;
+    margin-right: 1.2rem;
   }
 
   > h1 {
@@ -50,18 +52,19 @@ export const Search = styled.div`
   align-items: center;
   flex: 1;
 
-  input {
-    width: 100%;
-    height: 4.8rem;
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
-    color: ${({ theme }) => theme.COLORS.GRAY_400};
-    border-radius: 0.5rem;
-    padding: 1.6rem;
-
-    border: 0;
+  svg {
+    margin-left: 1rem;
   }
 `;
 export const Logout = styled.button`
-  width: 3rem;
-  height: 3rem;
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+
+  svg {
+    color: ${({ theme }) => theme.COLORS.WHITE};
+    width: 2.8rem;
+    height: 2.8rem;
+  }
 `;
