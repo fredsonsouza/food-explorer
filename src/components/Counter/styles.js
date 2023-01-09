@@ -19,6 +19,6 @@ export const Container = styled.div`
   }
 
   > button:last-child {
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 `;

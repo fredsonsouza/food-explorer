@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.p`
+export const Container = styled.div`
   display: flex;
   gap: 0.7rem;
   font-family: "Roboto";

@@ -4,12 +4,12 @@ import { FiMinus, FiPlus } from "react-icons/fi";
 import { BsReceipt } from "react-icons/bs";
 import { ButtonAdd } from "../ButtonAdd";
 
-export function Counter() {
+export function Counter({ value }) {
   return (
     <Container>
       <div>
         <ButtonText icon={FiMinus} />
-        <span>01</span>
+        <span>{value}</span>
         <ButtonText icon={FiPlus} />
       </div>
       <ButtonAdd title="incluir" icon={BsReceipt} />

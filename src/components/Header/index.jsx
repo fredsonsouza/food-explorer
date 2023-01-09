@@ -1,7 +1,5 @@
 import { Container, Content, Brand, Search, Logout } from "./styles";
-import { FiSearch } from "react-icons/fi";
-import { MdLogout } from "react-icons/md";
-import { BsReceipt } from "react-icons/bs";
+import { FiLogOut, FiSearch } from "react-icons/fi";
 
 import { Button } from "../../components/Button";
 import { Input } from "../Input";
@@ -28,15 +26,11 @@ export function Header() {
 
         <a href="">Meus favoritos</a>
         <Search>
-          <Input
-            type="text"
-            icon={FiSearch}
-            placeholder="Busque pelas opções de pratos"
-          />
+          <Input icon={FiSearch} placeholder="Busque pelas opções de pratos" />
         </Search>
-        <Button title="Meu pedido (0)" icon={BsReceipt} />
+        <Button title="Meus pedidos (0)" />
         <Logout>
-          <MdLogout></MdLogout>
+          <FiLogOut></FiLogOut>
         </Logout>
       </Content>
     </Container>
