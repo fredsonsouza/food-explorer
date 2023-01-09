@@ -5,38 +5,41 @@ export const Container = styled.div`
   height: 100vh;
 
   display: grid;
-  grid-template-rows: 10.5rem auto;
+  grid-template-rows: 10.5rem auto auto 10.5rem;
   grid-template-areas:
     "header"
-    "content";
+    "menuItem"
+    "content"
+    "footer";
+
+  > main {
+    width: 136.8rem;
+    margin: 0 auto;
+  }
+`;
+export const MenuItem = styled.div`
+  grid-area: menuItem;
+  display: flex;
+  width: 100%;
+  padding-top: 2.4rem;
 `;
 
 export const Content = styled.div`
   grid-area: content;
-  padding-top: 2.4rem;
+  display: flex;
+  height: 100%;
+  gap: 4rem;
+  align-items: stretch;
+  width: 100%;
+  margin-top: 6.7rem;
 
-  main {
-    max-width: 136.8rem;
-    margin: 0 auto;
-    gap: 4rem;
-    display: flex;
-    padding-top: 6rem;
-  }
-
-  img {
+  > img {
     width: 39rem;
     height: 39rem;
     object-fit: cover;
   }
-  section {
+  > section {
     max-width: 62rem;
-
-    > div {
-      display: flex;
-      gap: 5rem;
-      align-items: center;
-      margin-top: 4rem;
-    }
     h2 {
       font-style: normal;
       font-weight: 500;
@@ -50,11 +53,13 @@ export const Content = styled.div`
       font-weight: 400;
       font-size: 2.4rem;
       line-height: 140%;
-      margin-bottom: 3.4rem;
+      margin-bottom: 4rem;
+    }
+    > div {
+      display: flex;
+      align-items: center;
+      gap: 3.6rem;
+      margin-top: 4.7rem;
     }
   }
-`;
-export const Return = styled.div`
-  max-width: 136.8rem;
-  margin: 0 auto;
 `;

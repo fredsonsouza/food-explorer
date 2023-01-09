@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import signOut from "../../assets/SignOut.svg";
 
 export const Container = styled.header`
   grid-area: header;

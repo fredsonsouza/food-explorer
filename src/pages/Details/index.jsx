@@ -1,6 +1,7 @@
-import { Container, Content, Return } from "./styles";
+import { Container, Content, MenuItem } from "./styles";
 
 import { Header } from "../../components/Header";
+import { Footer } from "../../components/Footer";
 import { Price } from "../../components/Price";
 import { ButtonText } from "../../components/ButtonText";
 import { Counter } from "../../components/Counter";
@@ -14,14 +15,12 @@ export function Details() {
   return (
     <Container>
       <Header />
-      <Content>
-        <Return>
+      <main>
+        <MenuItem>
           <ButtonText title="voltar" icon={IoIosArrowBack}></ButtonText>
-        </Return>
-        <main>
-          <div>
-            <img src={dish} alt="Imagem do prato selecionado para pedido" />
-          </div>
+        </MenuItem>
+        <Content>
+          <img src={dish} alt="Imagem do prato selecionado para pedido" />
           <section>
             <h2>Salada Ravanello</h2>
             <p>
@@ -33,8 +32,9 @@ export function Details() {
               <Counter value="01"></Counter>
             </div>
           </section>
-        </main>
-      </Content>
+        </Content>
+      </main>
+      <Footer></Footer>
     </Container>
   );
 }
