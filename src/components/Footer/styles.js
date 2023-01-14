@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Container = styled.footer`
   grid-area: footer;
   width: 100%;
-  height: auto;
   background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
 
   display: flex;
