@@ -10,6 +10,9 @@ export const Container = styled.div`
     "header"
     "content"
     "footer";
+  input {
+    outline: 0;
+  }
 `;
 export const Content = styled.div`
   grid-area: content;

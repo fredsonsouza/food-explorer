@@ -3,7 +3,7 @@ import { Footer } from "../../components/Footer";
 import { OrderTable } from "../../components/OrderTable";
 import { Container, Content } from "./styles";
 
-export function Order() {
+export function OrderList() {
   return (
     <Container>
       <Header />

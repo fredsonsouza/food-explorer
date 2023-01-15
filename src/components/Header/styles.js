@@ -10,6 +10,10 @@ export const Container = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 0 12.4rem;
+
+  input {
+    outline: 0;
+  }
 `;
 export const Content = styled.div`
   max-width: 136.8rem;

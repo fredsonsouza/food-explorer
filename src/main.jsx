@@ -7,6 +7,7 @@ import theme from "./styles/theme";
 import { Details } from "./pages/Details";
 import { New } from "./pages/New";
 import { SignUp } from "./pages/SignUp";
+import { OrderList } from "./pages/OrderList";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

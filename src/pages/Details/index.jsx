@@ -1,4 +1,4 @@
-import { Container, Content, MenuItem } from "./styles";
+import { Container, Content } from "./styles";
 
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
@@ -16,20 +16,21 @@ export function Details() {
     <Container>
       <Header />
       <main>
-        <MenuItem>
-          <ButtonText title="voltar" icon={IoIosArrowBack}></ButtonText>
-        </MenuItem>
         <Content>
-          <img src={dish} alt="Imagem do prato selecionado para pedido" />
+          <ButtonText title="voltar" icon={IoIosArrowBack}></ButtonText>
           <section>
-            <h2>Salada Ravanello</h2>
-            <p>
-              Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.
-            </p>
-            <IngredientsList></IngredientsList>
-            <div>
-              <Price value="29,90"></Price>
-              <Counter value="01"></Counter>
+            <img src={dish} alt="Imagem do prato selecionado para pedido" />
+            <div class="details">
+              <h2>Salada Ravanello</h2>
+              <p>
+                Rabanetes, folhas verdes e molho agridoce salpicados com
+                gergelim.
+              </p>
+              <IngredientsList></IngredientsList>
+              <div class="pay">
+                <Price value="29,90"></Price>
+                <Counter value="01"></Counter>
+              </div>
             </div>
           </section>
         </Content>
