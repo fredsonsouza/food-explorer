@@ -6,7 +6,7 @@ import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { ButtonText } from "../../components/ButtonText";
 import { TextArea } from "../../components/TextArea";
-import { InputForm } from "../../components/InputForm";
+import { Input } from "../../components/Input";
 export function New() {
   return (
     <Container>
@@ -20,21 +20,21 @@ export function New() {
               <div>
                 <label htmlFor="">Imagem do prato</label>
 
-                <InputForm type="file" placeholder="selecione imagem" />
+                <Input type="file" placeholder="selecione imagem" />
               </div>
               <div>
                 <label htmlFor="">Nome</label>
-                <InputForm placeholder="Ex: Salada Ceasar" />
+                <Input placeholder="Ex: Salada Ceasar" />
               </div>
             </div>
             <div class="col-2-2">
               <div>
                 <label htmlFor="">Ingredientes</label>
-                <InputForm />
+                <Input />
               </div>
               <div>
                 <label htmlFor="">Preço</label>
-                <InputForm placeholder="R$ 00,00" />
+                <Input placeholder="R$ 00,00" />
               </div>
             </div>
             <div>

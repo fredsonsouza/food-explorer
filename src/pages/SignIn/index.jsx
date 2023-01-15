@@ -1,6 +1,6 @@
 import { Container, Brand, Form } from "./styles";
 import { Button } from "../../components/Button";
-import { InputForm } from "../../components/InputForm";
+import { Input } from "../../components/Input";
 
 export function SignIn() {
   return (
@@ -24,11 +24,11 @@ export function SignIn() {
         <h2>Faça login</h2>
         <div>
           <label htmlFor="">Email</label>
-          <InputForm placeholder="Ex: email@.com.br" />
+          <Input placeholder="Ex: email@.com.br" />
         </div>
         <div>
           <label htmlFor="">Senha</label>
-          <InputForm placeholder="No mínimo 6 caracteres" />
+          <Input placeholder="No mínimo 6 caracteres" />
         </div>
 
         <Button title="Entrar" />

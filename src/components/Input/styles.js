@@ -4,26 +4,24 @@ export const Container = styled.div`
   display: flex;
   width: 100%;
   align-items: center;
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
-  color: ${({ theme }) => theme.COLORS.GRAY_400};
-  border-radius: 0.5rem;
 
-  > input {
-    display: flex;
+  color: ${({ theme }) => theme.COLORS.WHITE};
 
+  input {
     width: 100%;
     height: 4.8rem;
-    padding: 1.6rem;
-
-    background: transparent;
-
-    border: none;
-
-    color: ${({ theme }) => theme.COLORS.WHITE};
+    padding: 1.2rem;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
     font-size: 1.6rem;
 
+    color: ${({ theme }) => theme.COLORS.WHITE};
+    background-color: transparent;
+
     &placeholder {
-      display: flex;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%;
       color: ${({ theme }) => theme.COLORS.GRAY_400};
     }
   }

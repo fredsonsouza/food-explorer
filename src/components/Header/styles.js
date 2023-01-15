@@ -13,12 +13,19 @@ export const Container = styled.header`
 `;
 export const Content = styled.div`
   max-width: 136.8rem;
-  margin: 0 auto;
-  display: flex;
   flex: 1;
+  display: flex;
   align-items: center;
   gap: 3.2rem;
+  margin: 0 auto;
+  justify-content: space-between;
 
+  > nav {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+  }
   a {
     font-style: normal;
     font-weight: 400;
@@ -26,19 +33,19 @@ export const Content = styled.div`
     line-height: 160%;
     color: ${({ theme }) => theme.COLORS.GRAY_200};
   }
+  > div {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    gap: 1rem;
+  }
 `;
 export const Brand = styled.div`
   display: flex;
   align-items: center;
-
-  > svg {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1.2rem;
-  }
+  gap: 1rem;
 
   > h1 {
-    display: flex;
     font-style: normal;
     font-weight: 700;
     font-size: 2.5rem;
@@ -47,11 +54,29 @@ export const Brand = styled.div`
   }
 `;
 export const Search = styled.div`
-  display: flex;
   align-items: center;
+  display: flex;
   flex: 1;
+  background: ${({ theme }) => theme.COLORS.BACKGROUND_600};
+  border: none;
+  border-radius: 0.5rem;
 
+  input {
+    width: 100%;
+    height: 4.8rem;
+    padding: 1.6rem;
+    border: none;
+    outline: 0;
+
+    color: ${({ theme }) => theme.COLORS.WHITE};
+    font-size: 1.6rem;
+
+    &placeholder {
+      color: ${({ theme }) => theme.COLORS.GRAY_400};
+    }
+  }
   svg {
+    color: ${({ theme }) => theme.COLORS.GRAY_400};
     margin-left: 1rem;
   }
 `;
