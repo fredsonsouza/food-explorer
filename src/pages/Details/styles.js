@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
   height: 100vh;
 
   display: grid;
@@ -10,31 +9,26 @@ export const Container = styled.div`
     "header"
     "content"
     "footer";
-
-  main {
-    padding-top: 2rem;
-  }
 `;
 
 export const Content = styled.div`
   grid-area: content;
-  max-width: 136.8rem;
+  max-width: 122rem;
   height: 100%;
+  padding: 2rem 0;
   margin: 0 auto;
 
   section {
     display: flex;
-    align-items: stretch;
-    gap: 4rem;
-    margin-top: 6rem;
+    padding-top: 4rem;
+    align-items: center;
 
-    .details {
-      max-width: 65rem;
+    img {
+      width: 40rem;
     }
-    > img {
-      width: 38rem;
-      height: 38rem;
-      object-fit: cover;
+    > div {
+      margin-left: 3.2rem;
+      max-width: 65rem;
     }
     h2 {
       font-style: normal;
@@ -51,12 +45,11 @@ export const Content = styled.div`
       line-height: 140%;
       margin-bottom: 4rem;
     }
-
     .pay {
       display: flex;
       align-items: center;
       gap: 6rem;
-      margin-top: 6rem;
+      margin-top: 5rem;
     }
   }
 `;

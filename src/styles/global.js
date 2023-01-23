@@ -17,7 +17,7 @@ body{
   -webkit-font-smoothing: antialiased
 }
 
-h1, a, input, table, label, textarea{
+h1, a, input, table, label, textarea, strong{
   font-family: 'Roboto', sans-serif;
 }
 button, h2, p, span{

@@ -5,21 +5,15 @@ export const Container = styled.header`
   width: 100%;
   height: 10.4rem;
   background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 12.4rem;
-
-  input {
-    outline: 0;
-  }
 `;
 export const Content = styled.div`
-  max-width: 136.8rem;
-  flex: 1;
   display: flex;
+  max-width: 122rem;
   align-items: center;
+  flex: 1;
   gap: 3.2rem;
   margin: 0 auto;
   justify-content: space-between;
@@ -40,8 +34,8 @@ export const Content = styled.div`
   > div {
     display: flex;
     align-items: center;
-    width: 20%;
-    gap: 1rem;
+    width: 26%;
+    gap: 3.1rem;
   }
 `;
 export const Brand = styled.div`

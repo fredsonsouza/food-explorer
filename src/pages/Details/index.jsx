@@ -10,6 +10,7 @@ import { IoIosArrowBack } from "react-icons/io";
 
 import dish from "../../assets/dish.png";
 import { IngredientsList } from "../../components/IngredientsList";
+import { Section } from "../../components/Section";
 
 export function Details() {
   return (
@@ -18,9 +19,9 @@ export function Details() {
       <main>
         <Content>
           <ButtonText title="voltar" icon={IoIosArrowBack}></ButtonText>
-          <section>
+          <Section>
             <img src={dish} alt="Imagem do prato selecionado para pedido" />
-            <div class="details">
+            <div>
               <h2>Salada Ravanello</h2>
               <p>
                 Rabanetes, folhas verdes e molho agridoce salpicados com
@@ -32,7 +33,7 @@ export function Details() {
                 <Counter value="01"></Counter>
               </div>
             </div>
-          </section>
+          </Section>
         </Content>
       </main>
       <Footer></Footer>

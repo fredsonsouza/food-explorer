@@ -12,7 +12,7 @@ export function Counter({ value }) {
         <span>{value}</span>
         <ButtonText icon={FiPlus} />
       </div>
-      <ButtonAdd title="incluir" icon={BsReceipt} />
+      <ButtonAdd title="incluir" />
     </Container>
   );
 }
