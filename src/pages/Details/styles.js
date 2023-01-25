@@ -24,7 +24,7 @@ export const Content = styled.div`
     align-items: center;
 
     img {
-      width: 40rem;
+      width: 38rem;
     }
     > div {
       margin-left: 3.2rem;

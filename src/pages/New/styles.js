@@ -11,20 +11,19 @@ export const Container = styled.div`
     "header"
     "Content"
     "footer";
+
+  > header {
+    input {
+      border: 0;
+      outline: 0;
+    }
+  }
 `;
 
 export const Content = styled.div`
   grid-area: content;
-  max-width: 136.8rem;
+  max-width: 122rem;
   margin: 3.2rem auto 0 auto;
-
-  h2 {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 3.2rem;
-    line-height: 140%;
-    margin: 2.4rem 0 3.2rem;
-  }
 `;
 
 export const Form = styled.form`
@@ -33,6 +32,7 @@ export const Form = styled.form`
   flex-direction: column;
   flex-wrap: nowrap;
   width: 100%;
+  margin-top: 3.2rem;
 
   input {
     margin-top: 0.8rem;
@@ -53,8 +53,8 @@ export const Form = styled.form`
     border: 1px solid #ffffff;
     border-radius: 5px;
     color: ${({ theme }) => theme.COLORS.WHITE};
-    left: auto 0;
     background: rgba(255, 255, 255, 0.1);
+    margin-left: auto;
   }
   .col-2 {
     display: flex;

@@ -63,8 +63,6 @@ export const Search = styled.div`
     width: 100%;
     height: 4.8rem;
     padding: 1.6rem;
-    border: none;
-    outline: 0;
 
     color: ${({ theme }) => theme.COLORS.WHITE};
     font-size: 1.6rem;
