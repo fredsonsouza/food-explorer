@@ -24,13 +24,7 @@ export const Content = styled.div`
     align-items: center;
     gap: 3.2rem;
   }
-  a {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 160%;
-    color: ${({ theme }) => theme.COLORS.GRAY_200};
-  }
+
   > div {
     display: flex;
     align-items: center;
@@ -42,27 +36,43 @@ export const Brand = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+  position: relative;
+  padding-bottom: 1rem;
 
-  > h1 {
+  h1 {
     font-style: normal;
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     line-height: 2.9rem;
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
+  strong {
+    position: absolute;
+    font-style: normal;
+    font-weight: 400;
+    top: 22.5px;
+    left: 147px;
+    font-size: 12px;
+    line-height: 160%;
+    color: ${({ theme }) => theme.COLORS.BLUE};
+  }
 `;
 export const Search = styled.div`
-  align-items: center;
   display: flex;
+  align-items: center;
   flex: 1;
   background: ${({ theme }) => theme.COLORS.BACKGROUND_600};
+
   border: none;
   border-radius: 0.5rem;
 
-  input {
+  > input {
     width: 100%;
+    border: 0;
+    outline: 0;
     height: 4.8rem;
     padding: 1.6rem;
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_600};
 
     color: ${({ theme }) => theme.COLORS.WHITE};
     font-size: 1.6rem;
@@ -71,7 +81,7 @@ export const Search = styled.div`
       color: ${({ theme }) => theme.COLORS.GRAY_400};
     }
   }
-  svg {
+  img {
     color: ${({ theme }) => theme.COLORS.GRAY_400};
     margin-left: 1rem;
   }

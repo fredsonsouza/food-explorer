@@ -9,6 +9,13 @@ export const Container = styled.div`
     "header"
     "content"
     "footer";
+
+  header {
+    input {
+      border: 0;
+      outline: 0;
+    }
+  }
 `;
 
 export const Content = styled.div`
@@ -20,15 +27,14 @@ export const Content = styled.div`
 
   section {
     display: flex;
-    padding-top: 4rem;
     align-items: center;
-
+    max-width: 100%;
     img {
-      width: 38rem;
+      width: 39rem;
     }
-    > div {
-      margin-left: 3.2rem;
-      max-width: 65rem;
+
+    div {
+      margin-left: 5rem;
     }
     h2 {
       font-style: normal;
@@ -36,20 +42,21 @@ export const Content = styled.div`
       font-size: 4rem;
       line-height: 140%;
       color: ${({ theme }) => theme.COLORS.GRAY_200};
-      margin-bottom: 0.8rem;
+      margin-bottom: 2.4rem;
     }
     p {
       font-style: normal;
       font-weight: 400;
       font-size: 2.4rem;
       line-height: 140%;
-      margin-bottom: 4rem;
+      margin-bottom: 2.8rem;
     }
-    .pay {
-      display: flex;
-      align-items: center;
-      gap: 6rem;
+    button {
+      width: auto;
       margin-top: 5rem;
+      img {
+        display: none;
+      }
     }
   }
 `;

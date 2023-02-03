@@ -3,7 +3,7 @@ import { FiLogOut, FiSearch } from "react-icons/fi";
 import { BsReceipt } from "react-icons/bs";
 
 import { Button } from "../../components/Button";
-import { Input } from "../../components/Input";
+import search from "../../assets/search.svg";
 
 export function Header() {
   return (
@@ -24,18 +24,16 @@ export function Header() {
               />
             </svg>
             <h1>food explorer</h1>
+            <strong>admin</strong>
           </Brand>
 
-          <a href="">Meus favoritos</a>
           <Search>
-            <Input
-              icon={FiSearch}
-              placeholder="Busque pelas opções de pratos"
-            />
+            <img src={search} alt="" />
+            <input placeholder="Busque pelas opções de pratos" />
           </Search>
         </nav>
         <div>
-          <Button icon={BsReceipt} title="Meu pedido (0)" />
+          <Button title="Pedidos (0)"></Button>
           <Logout>
             <FiLogOut></FiLogOut>
           </Logout>

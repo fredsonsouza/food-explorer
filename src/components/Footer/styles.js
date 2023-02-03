@@ -19,6 +19,9 @@ export const Content = styled.div`
     display: flex;
     align-items: center;
     gap: 1rem;
+    svg {
+      opacity: 0.3;
+    }
 
     h1 {
       font-style: normal;

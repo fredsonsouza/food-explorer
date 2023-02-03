@@ -7,16 +7,16 @@ export const Container = styled.div`
 
   color: ${({ theme }) => theme.COLORS.WHITE};
 
-  input {
+  > input {
     width: 100%;
     height: 4.8rem;
-    padding: 1.2rem;
-    border-radius: 5px;
-    border: 1px solid #fff;
-    font-size: 1.6rem;
+    padding: 1.6rem;
+    border: 0;
+    border-radius: 0.5rem;
 
     color: ${({ theme }) => theme.COLORS.WHITE};
-    background-color: transparent;
+    font-size: 1.6rem;
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_INPUT};
 
     &placeholder {
       font-style: normal;

@@ -8,6 +8,8 @@ import { ButtonText } from "../../components/ButtonText";
 import { TextArea } from "../../components/TextArea";
 import { Section } from "../../components/Section";
 import { Input } from "../../components/Input";
+import { Button } from "../../components/Button";
+import { IngredientItem } from "../../components/IngredientItem";
 export function New() {
   return (
     <Container>
@@ -15,34 +17,57 @@ export function New() {
       <main>
         <Content>
           <ButtonText title="voltar" icon={IoIosArrowBack}></ButtonText>
-          <Section title="Editar prato">
+          <Section title="Adicionar prato">
             <Form>
-              <div class="col-2">
-                <div>
-                  <label htmlFor="">Imagem do prato</label>
-
-                  <Input type="file" placeholder="selecione imagem" />
+              <div className="col-3">
+                <div className="img-dishe">
+                  <label>Imagem do prato</label>
+                  <div>
+                    <label htmlFor="arrow">
+                      <FiUpload /> selecione a imagem
+                      <input
+                        id="arrow"
+                        type="file"
+                        placeholder="selecionar imagem"
+                      />
+                    </label>
+                  </div>
                 </div>
                 <div>
                   <label htmlFor="">Nome</label>
                   <Input placeholder="Ex: Salada Ceasar" />
                 </div>
-              </div>
-              <div class="col-2-2">
                 <div>
-                  <label htmlFor="">Ingredientes</label>
-                  <Input />
-                </div>
-                <div>
-                  <label htmlFor="">Preço</label>
-                  <Input placeholder="R$ 00,00" />
+                  <label htmlFor="">Categoria</label>
+                  <Input placeholder="Ex: Salada Ceasar" />
                 </div>
               </div>
+              <Section>
+                <div className="ingredients">
+                  <div className="ingredients-tags">
+                    <label>Ingredientes</label>
+                    <div className="ingredient-item">
+                      <IngredientItem value="Alface Verde" />
+
+                      <IngredientItem isNew placeholder="Adicionar" />
+                    </div>
+                  </div>
+                  <div>
+                    <label>Preço</label>
+                    <div className="price">
+                      <Input placeholder="R$ 00,00" />
+                    </div>
+                  </div>
+                </div>
+              </Section>
               <div>
                 <label htmlFor="">Descrição</label>
                 <TextArea placeholder="Fale brevemente sobre o prato, seus ingredientes e composição" />
               </div>
-              <button>Adicionar pedido</button>
+              <div className="buttons">
+                <Button title="Editar prato" />
+                <Button title="Salvar Alterações" />
+              </div>
             </Form>
           </Section>
         </Content>
