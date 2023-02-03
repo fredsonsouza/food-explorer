@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import arrowDown from "../../assets/arrow-down.svg";
 
 export const Container = styled.div`
   width: 100%;
@@ -103,16 +104,35 @@ export const Form = styled.form`
   }
   .col-3 > div:nth-child(1) {
     display: flex;
-    /* border: 1px solid yellow; */
 
     flex-direction: column;
-    width: 60rem;
+    width: 50%;
   }
   .col-3 > div:nth-child(2) {
     width: 100%;
   }
-  .col-3 > div:nth-child(3) {
-    width: 75rem;
+  .col-3-select {
+    /* border: 1px solid yellow; */
+    max-width: 36rem;
+    display: grid;
+    gap: 1rem;
+
+    div {
+      select {
+        appearance: none;
+        padding: 1rem;
+        outline: none;
+        border: none;
+        border-radius: 0.5rem;
+        background-image: url(${arrowDown});
+        background-repeat: no-repeat;
+        background-position: right 12px top 50%;
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_INPUT};
+        color: ${({ theme }) => theme.COLORS.GRAY_300};
+        width: 100%;
+        height: 4.8rem;
+      }
+    }
   }
 
   .img-dishe {

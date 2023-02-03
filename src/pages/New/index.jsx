@@ -37,9 +37,15 @@ export function New() {
                   <label htmlFor="">Nome</label>
                   <Input placeholder="Ex: Salada Ceasar" />
                 </div>
-                <div>
+                <div className="col-3-select">
                   <label htmlFor="">Categoria</label>
-                  <Input placeholder="Ex: Salada Ceasar" />
+                  <div>
+                    <select name="" id="event-category">
+                      <option value="category1">Refeição</option>
+                      <option value="category2">Bebida</option>
+                      <option value="category3">Sobremesa</option>
+                    </select>
+                  </div>
                 </div>
               </div>
               <Section>
