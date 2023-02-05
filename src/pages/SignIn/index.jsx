@@ -24,16 +24,16 @@ export function SignIn() {
         <h2>Faça login</h2>
         <div>
           <label htmlFor="">Email</label>
-          <Input placeholder="Ex: email@.com.br" />
+          <input placeholder="Ex: email@.com.br" />
         </div>
         <div>
           <label htmlFor="">Senha</label>
-          <Input placeholder="No mínimo 6 caracteres" />
+          <input placeholder="No mínimo 6 caracteres" />
         </div>
 
         <Button title="Entrar" />
 
-        <a href="">Criar conta</a>
+        <a href="">Criar uma conta</a>
       </Form>
     </Container>
   );

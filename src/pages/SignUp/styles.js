@@ -43,7 +43,18 @@ export const Form = styled.form`
     color: ${({ theme }) => theme.COLORS.GRAY_300};
   }
   input {
+    width: 100%;
+    border: 0;
+    height: 4.8rem;
+    padding: 1.6rem;
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_600};
     margin-top: 0.8rem;
+    color: ${({ theme }) => theme.COLORS.WHITE};
+    font-size: 1.6rem;
+
+    &placeholder {
+      color: ${({ theme }) => theme.COLORS.GRAY_400};
+    }
   }
 
   h2 {
@@ -62,5 +73,10 @@ export const Form = styled.form`
     line-height: 2.4rem;
     color: ${({ theme }) => theme.COLORS.WHITE};
     text-align: center;
+  }
+  button {
+    img {
+      display: none;
+    }
   }
 `;
