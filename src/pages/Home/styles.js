@@ -10,10 +10,6 @@ export const Container = styled.div`
     "header"
     "content"
     "footer";
-
-  input {
-    border: 0;
-  }
 `;
 export const Content = styled.div`
   grid-area: content;
@@ -67,6 +63,34 @@ export const Dishes = styled.ul`
   display: flex;
   margin-top: 3rem;
   gap: 2.7rem;
+
+  span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 140%;
+    color: ${({ theme }) => theme.COLORS.GRAY_200};
+  }
+  strong {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 160%;
+    text-align: center;
+    color: ${({ theme }) => theme.COLORS.GRAY_300};
+  }
+  .favorite {
+    margin-left: auto;
+    button {
+      border: none;
+      background: transparent;
+    }
+    img {
+      width: 2.4rem;
+      height: 2.2rem;
+      margin-left: auto;
+    }
+  }
   ul {
     display: flex;
   }
@@ -88,21 +112,6 @@ export const Dishes = styled.ul`
       display: grid;
       place-items: center;
       padding-top: 0.7rem;
-      span {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 2.4rem;
-        line-height: 140%;
-        color: ${({ theme }) => theme.COLORS.GRAY_200};
-      }
-      strong {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1.4rem;
-        line-height: 160%;
-        text-align: center;
-        color: ${({ theme }) => theme.COLORS.GRAY_300};
-      }
     }
     > div {
       display: grid;
