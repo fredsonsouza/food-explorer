@@ -1,8 +1,11 @@
 import { Container, Brand, Form } from "./styles";
 import { Button } from "../../components/Button";
-import { Input } from "../../components/Input";
+
+import { useAuth } from "../../hooks/auth";
 
 export function SignIn() {
+  const data = useAuth();
+  console.log("MEU CONTEXTO ==>", data);
   return (
     <Container>
       <Brand>
