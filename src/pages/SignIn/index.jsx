@@ -1,11 +1,19 @@
+import { useState } from "react";
 import { Container, Brand, Form } from "./styles";
 import { Button } from "../../components/Button";
 
 import { useAuth } from "../../hooks/auth";
 
 export function SignIn() {
-  const data = useAuth();
-  console.log("MEU CONTEXTO ==>", data);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const { signIn } = useAuth();
+
+  function handleSignIn() {
+    signIn({ email, password });
+  }
+
   return (
     <Container>
       <Brand>
@@ -27,14 +35,22 @@ export function SignIn() {
         <h2>Faça login</h2>
         <div>
           <label htmlFor="">Email</label>
-          <input placeholder="Ex: email@.com.br" />
+          <input
+            type="text"
+            placeholder="Ex: email@.com.br"
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
         <div>
           <label htmlFor="">Senha</label>
-          <input placeholder="No mínimo 6 caracteres" />
+          <input
+            type="password"
+            placeholder="No mínimo 6 caracteres"
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </div>
 
-        <Button title="Entrar" />
+        <Button title="Entrar" onClick={handleSignIn} />
 
         <a href="">Criar uma conta</a>
       </Form>
