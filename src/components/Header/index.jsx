@@ -1,11 +1,13 @@
 import { Container, Content, Brand, Search, Logout } from "./styles";
 import { FiLogOut, FiSearch } from "react-icons/fi";
 import { BsReceipt } from "react-icons/bs";
+import { useAuth } from "../../hooks/auth";
 
 import { Button } from "../../components/Button";
 import search from "../../assets/search.svg";
 
 export function Header() {
+  const { signOut } = useAuth();
   return (
     <Container>
       <Content>
@@ -35,7 +37,7 @@ export function Header() {
         <div>
           <Button title="Pedidos (0)"></Button>
           <Logout>
-            <FiLogOut></FiLogOut>
+            <FiLogOut onClick={signOut}></FiLogOut>
           </Logout>
         </div>
       </Content>
