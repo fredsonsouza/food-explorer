@@ -59,10 +59,14 @@ export const Introduction = styled.div`
     }
   }
 `;
-export const Dishes = styled.ul`
-  display: flex;
-  margin-top: 3rem;
-  gap: 2.7rem;
+export const Dish = styled.li`
+  display: grid;
+  place-items: center;
+  border-radius: 0.8rem;
+  gap: 1.7rem;
+  padding: 1rem 2rem 4rem 2rem;
+  max-width: 30rem;
+  background: rgba(0, 0, 0, 0.32);
 
   span {
     font-style: normal;
@@ -79,8 +83,8 @@ export const Dishes = styled.ul`
     text-align: center;
     color: ${({ theme }) => theme.COLORS.GRAY_300};
   }
-  .favorite {
-    margin-left: auto;
+  .pencil {
+    margin-left: 200px;
     button {
       border: none;
       background: transparent;
@@ -91,32 +95,30 @@ export const Dishes = styled.ul`
       margin-left: auto;
     }
   }
-  ul {
-    display: flex;
+  img {
+    width: 24rem;
+    height: 24rem;
+    border-radius: 50%;
   }
-  li {
+  > div:nth-child(2) {
     display: grid;
     place-items: center;
-    border-radius: 0.8rem;
-    gap: 1.7rem;
-    padding: 1rem 2rem 4rem 2rem;
-    max-width: 30rem;
-    background: rgba(0, 0, 0, 0.32);
-
-    img {
-      width: 24rem;
-      height: 24rem;
-      border-radius: 50%;
-    }
-    > div:nth-child(2) {
-      display: grid;
-      place-items: center;
-      padding-top: 0.7rem;
-    }
-    > div {
-      display: grid;
-      place-items: center;
-      gap: 1.7rem;
-    }
+    padding-top: 0.7rem;
   }
+  > div {
+    display: grid;
+    place-items: center;
+    gap: 1.7rem;
+  }
+  .info {
+    display: grid;
+    place-items: center;
+    gap: 1.7rem;
+  }
+`;
+
+export const Dishes = styled.ul`
+  display: flex;
+  margin-top: 3rem;
+  gap: 2.7rem;
 `;

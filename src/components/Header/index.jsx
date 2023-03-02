@@ -2,6 +2,7 @@ import { Container, Content, Brand, Search, Logout } from "./styles";
 import { FiLogOut, FiSearch } from "react-icons/fi";
 import { BsReceipt } from "react-icons/bs";
 import { useAuth } from "../../hooks/auth";
+import { Link } from "react-router-dom";
 
 import { Button } from "../../components/Button";
 import search from "../../assets/search.svg";
@@ -35,7 +36,9 @@ export function Header() {
           </Search>
         </nav>
         <div>
-          <Button title="Pedidos (0)"></Button>
+          <Link to="/new">
+            <Button title="Novo prato"></Button>
+          </Link>
           <Logout>
             <FiLogOut onClick={signOut}></FiLogOut>
           </Logout>

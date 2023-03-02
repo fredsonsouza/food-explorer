@@ -11,7 +11,7 @@ import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { IngredientItem } from "../../components/IngredientItem";
 import { Link } from "react-router-dom";
-export function New() {
+export function Edit() {
   return (
     <Container>
       <Header />
@@ -20,7 +20,7 @@ export function New() {
           <Link to="/">
             <ButtonText title="voltar" icon={IoIosArrowBack}></ButtonText>
           </Link>
-          <Section title="Adicionar prato">
+          <Section title="Editar prato">
             <Form>
               <div className="col-3">
                 <div className="img-dishe">
@@ -74,7 +74,7 @@ export function New() {
                 <TextArea placeholder="Fale brevemente sobre o prato, seus ingredientes e composição" />
               </div>
               <div className="buttons">
-                {/* <Button title="Editar prato" /> */}
+                <Button title="Excluir prato" />
                 <Button title="Salvar Alterações" />
               </div>
             </Form>
