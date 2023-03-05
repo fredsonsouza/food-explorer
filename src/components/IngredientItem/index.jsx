@@ -7,6 +7,7 @@ export function IngredientItem({ isNew = false, value, onClick, ...rest }) {
       <input type="text" value={value} readOnly={!isNew} {...rest} />
 
       <button
+        type="button"
         className={isNew ? "button-add" : "button-delete"}
         onClick={onClick}
       >

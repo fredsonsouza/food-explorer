@@ -1,6 +1,10 @@
+import { useState } from "react";
+
 import { Container, Content, Form } from "./styles";
 import { IoIosArrowBack } from "react-icons/io";
 import { FiUpload } from "react-icons/fi";
+
+import { useAuth } from "../../hooks/auth";
 
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
@@ -12,9 +16,12 @@ import { Button } from "../../components/Button";
 import { IngredientItem } from "../../components/IngredientItem";
 import { Link } from "react-router-dom";
 export function Edit() {
+  const { dishe } = useAuth();
+
   return (
     <Container>
       <Header />
+
       <main>
         <Content>
           <Link to="/">

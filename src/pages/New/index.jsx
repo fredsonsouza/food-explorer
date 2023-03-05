@@ -1,6 +1,10 @@
 import { Container, Content, Form } from "./styles";
 import { IoIosArrowBack } from "react-icons/io";
 import { FiUpload } from "react-icons/fi";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+import { api } from "../../services/api";
 
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
@@ -11,7 +15,45 @@ import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { IngredientItem } from "../../components/IngredientItem";
 import { Link } from "react-router-dom";
+
 export function New() {
+  const [name, setName] = useState("");
+  const [category, setCategory] = useState("");
+  const [price, setPrice] = useState("");
+  const [description, setDescription] = useState("");
+
+  const list = [
+    { id: 1, name: "Refeição" },
+    { id: 2, name: "Bebidas" },
+    { id: 3, name: "Sobremesa" },
+  ];
+
+  const [ingredients, setIngredients] = useState([]);
+  const [newIngredient, setNewIngredient] = useState("");
+
+  const navigate = useNavigate();
+
+  function handleAddIngredient() {
+    setIngredients((prevState) => [...prevState, newIngredient]);
+    setNewIngredient("");
+  }
+  function handleRemoveIngredient(deleted) {
+    setIngredients((prevState) =>
+      prevState.filter((ingredient) => ingredient !== deleted)
+    );
+  }
+
+  async function handleNewDishe() {
+    await api.post("/dishes", {
+      name,
+      category,
+      ingredients,
+      price,
+      description,
+    });
+    alert("Prato cadastrado com sucesso!");
+    navigate("/");
+  }
   return (
     <Container>
       <Header />
@@ -38,44 +80,72 @@ export function New() {
                 </div>
                 <div>
                   <label htmlFor="">Nome</label>
-                  <Input placeholder="Ex: Salada Ceasar" />
+                  <Input
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Ex: Salada Ceasar"
+                  />
                 </div>
                 <div className="col-3-select">
                   <label htmlFor="">Categoria</label>
                   <div>
-                    <select name="" id="event-category">
-                      <option value="category1">Refeição</option>
-                      <option value="category2">Bebida</option>
-                      <option value="category3">Sobremesa</option>
+                    <select
+                      value={category}
+                      onChange={(e) => setCategory(e.target.value)}
+                      name=""
+                      id="event-category"
+                    >
+                      {list.map((item, index) => (
+                        <option key={index} value={item.name}>
+                          {item.name}
+                        </option>
+                      ))}
                     </select>
                   </div>
                 </div>
               </div>
               <Section>
-                <div className="ingredients">
-                  <div className="ingredients-tags">
+                <div className="tags">
+                  <div className="tags-tags">
                     <label>Ingredientes</label>
                     <div className="ingredient-item">
-                      <IngredientItem value="Alface Verde" />
+                      {ingredients.map((ingredient, index) => (
+                        <IngredientItem
+                          key={String(index)}
+                          value={ingredient}
+                          onClick={() => handleRemoveIngredient(ingredient)}
+                        />
+                      ))}
 
-                      <IngredientItem isNew placeholder="Adicionar" />
+                      <IngredientItem
+                        isNew
+                        placeholder="Adicionar"
+                        onChange={(e) => setNewIngredient(e.target.value)}
+                        value={newIngredient}
+                        onClick={handleAddIngredient}
+                      />
                     </div>
                   </div>
                   <div>
                     <label>Preço</label>
                     <div className="price">
-                      <Input placeholder="R$ 00,00" />
+                      <Input
+                        onChange={(e) => setPrice(e.target.value)}
+                        placeholder="R$ 00,00"
+                      />
                     </div>
                   </div>
                 </div>
               </Section>
               <div>
                 <label htmlFor="">Descrição</label>
-                <TextArea placeholder="Fale brevemente sobre o prato, seus ingredientes e composição" />
+                <TextArea
+                  onChange={(e) => setDescription(e.target.value)}
+                  placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"
+                />
               </div>
               <div className="buttons">
                 {/* <Button title="Editar prato" /> */}
-                <Button title="Salvar Alterações" />
+                <Button onClick={handleNewDishe} title="Salvar Alterações" />
               </div>
             </Form>
           </Section>

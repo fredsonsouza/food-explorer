@@ -4,6 +4,8 @@ import { Button } from "../../components/Button";
 
 import { useAuth } from "../../hooks/auth";
 
+import { Link } from "react-router-dom";
+
 export function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -52,7 +54,7 @@ export function SignIn() {
 
         <Button title="Entrar" onClick={handleSignIn} />
 
-        <a href="">Criar uma conta</a>
+        <Link to="/register">Criar uma conta</Link>
       </Form>
     </Container>
   );
