@@ -1,18 +1,14 @@
-import { Container, Content, Introduction, Dish, Dishes } from "./styles";
+import { useState } from "react";
+
+import { Container, Content, Introduction } from "./styles";
 import { Header } from "../../components/Header";
 import { Section } from "../../components/Section";
-import { Price } from "../../components/Price";
-import { Counter } from "../../components/Counter";
 import { Footer } from "../../components/Footer";
 import bghome from "../../assets/h1.svg";
-import pencil from "../../assets/pencil.svg";
-import dish1 from "../../assets/dish1.jpg";
-import dish2 from "../../assets/dish2.jpg";
-import dish3 from "../../assets/dish3.jpg";
-
-import { Link } from "react-router-dom";
+import { Card } from "../../components/Card";
 
 export function Home() {
+  const [dishes, setDishes] = useState([]);
   return (
     <Container>
       <Header />
@@ -28,31 +24,17 @@ export function Home() {
               <p>Sinta o cuidado do preparo com ingredientes selecionados</p>
             </div>
           </Introduction>
-          <Section title="Pratos principais">
-            <Dishes>
-              <Dish>
-                <Link to="/edit">
-                  <div className="pencil">
-                    <button>
-                      <img src={pencil} alt="" />
-                    </button>
-                  </div>
-                </Link>
-                <img src={dish1} alt="" />
-                <div>
-                  <span>Salada Ravanello</span>
-                  <strong>
-                    Rabanetes, folhas verdes e molho agridoce salpicados com
-                    gergelim
-                  </strong>
-                </div>
-                <div>
-                  <Price value="27,99" />
-                  <Counter value="01" />
-                </div>
-              </Dish>
-            </Dishes>
-          </Section>
+
+          {dishes.filter((dish) => dish.category == "Sobremesas").length >
+            0 && (
+            <Section title="Sobremesas">
+              {dishes
+                .filter((dish) => dish.category == "Sobremesas")
+                .map((dish) => (
+                  <Card key={String(dish.id)} data={dish} />
+                ))}
+            </Section>
+          )}
         </Content>
       </main>
       <Footer />

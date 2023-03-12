@@ -17,6 +17,7 @@ import { IngredientItem } from "../../components/IngredientItem";
 import { Link } from "react-router-dom";
 
 export function New() {
+  const [pictureFile, setPictureFile] = useState(null);
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
   const [price, setPrice] = useState("");
@@ -44,16 +45,20 @@ export function New() {
   }
 
   async function handleNewDishe() {
-    await api.post("/dishes", {
-      name,
-      category,
-      ingredients,
-      price,
-      description,
-    });
-    alert("Prato cadastrado com sucesso!");
+    const formData = new FormData();
+    formData.append("picture", pictureFile);
+    formData.append("name", name);
+    formData.append("description", description);
+    formData.append("category", category);
+    formData.append("price", price);
+
+    ingredients.map((ingredient) => formData.append("ingredients", ingredient));
+
+    api.post("/dishes", formData);
+    alert("Prato cadastrado com sucesso");
     navigate("/");
   }
+
   return (
     <Container>
       <Header />
@@ -73,6 +78,7 @@ export function New() {
                       <input
                         id="arrow"
                         type="file"
+                        onChange={(e) => setPictureFile(e.target.files[0])}
                         placeholder="selecionar imagem"
                       />
                     </label>

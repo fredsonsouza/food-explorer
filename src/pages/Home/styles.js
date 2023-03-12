@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import bghome from "../../assets/h1.svg";
 
 export const Container = styled.div`
   display: grid;
@@ -59,66 +58,5 @@ export const Introduction = styled.div`
     }
   }
 `;
-export const Dish = styled.li`
-  display: grid;
-  place-items: center;
-  border-radius: 0.8rem;
-  gap: 1.7rem;
-  padding: 1rem 2rem 4rem 2rem;
-  max-width: 30rem;
-  background: rgba(0, 0, 0, 0.32);
 
-  span {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 2.4rem;
-    line-height: 140%;
-    color: ${({ theme }) => theme.COLORS.GRAY_200};
-  }
-  strong {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.4rem;
-    line-height: 160%;
-    text-align: center;
-    color: ${({ theme }) => theme.COLORS.GRAY_300};
-  }
-  .pencil {
-    margin-left: 200px;
-    button {
-      border: none;
-      background: transparent;
-    }
-    img {
-      width: 2.4rem;
-      height: 2.2rem;
-      margin-left: auto;
-    }
-  }
-  img {
-    width: 24rem;
-    height: 24rem;
-    border-radius: 50%;
-  }
-  > div:nth-child(2) {
-    display: grid;
-    place-items: center;
-    padding-top: 0.7rem;
-  }
-  > div {
-    display: grid;
-    place-items: center;
-    gap: 1.7rem;
-  }
-  .info {
-    display: grid;
-    place-items: center;
-    gap: 1.7rem;
-  }
-`;
-
-export const Dishes = styled.ul`
-  display: flex;
-  margin-top: 3rem;
-  gap: 2.7rem;
-`;
+export const Dishes = styled.ul``;

@@ -16,8 +16,9 @@ import { Button } from "../../components/Button";
 import { IngredientItem } from "../../components/IngredientItem";
 import { Link } from "react-router-dom";
 export function Edit() {
-  const { dishe } = useAuth();
+  const { user } = useAuth();
 
+  const [name, setName] = useState("");
   return (
     <Container>
       <Header />
